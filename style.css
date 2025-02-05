@@ -1,25 +1,91 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+html {
+	padding: 0px;
+	margin: 0px;
 }
-
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  font-size: 18px;
+	line-height: 1.3;
+	letter-spacing: 0;
+	font-weight: 400;
+  font-family: Arial, sans-serif;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+}
+h1, h2, h3, h4, h5, h6{
+	font-weight:700;
+	color:#333;
+	margin-bottom:20px;
+}
+h1 { font-size: 45px; }
+h2 { font-size: 36px; }
+h3 { font-size: 30px; }
+h4 { font-size: 24px; }
+h5 { font-size: 20px; }
+h6 { font-size: 16px; }
+.wrapper { 
+  box-sizing: border-box;
+}
+.container{
+	max-width: 1280px;
+	padding: 0px 40px;
+	margin: 0px auto;
 }
 header {
-    background-color: #48697a;
-    background-image: url("./images/florida_background.jpg");
     background-size: cover;
     color: white;
     padding: 10rem;
     text-align: center;
     font-size: 2rem;
 }
-
+header h1 {
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+}
+.header_tallahassee {
+  background-size: cover;
+  background-position: center;
+  padding: 10rem;
+  text-align: center;
+  font-size: 2rem;
+}
+.header_tallahassee h1{
+  color: black;
+  text-align: center;
+  font-size: 3rem;
+}
+.header_clearwater {
+  background-size: cover;
+  background-position: center;
+  padding: 10rem;
+  text-align: center;
+  font-size: 3rem;
+}
+.header_clearwater h1{
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+}
+.header_orlando {
+  background-size: cover;
+  background-position: center;
+  padding: 10rem;
+  text-align: center;
+  font-size: 3rem;
+}
+.header_orlando h1{
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+}
+.seal {
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  height: 200px;
+}
 .navbar {
     overflow: hidden;
     background-color: #2e3a3d;
@@ -30,7 +96,7 @@ header {
     font-size: 16px;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 24px 14px;
     text-decoration: none;
   }
   .navbar li {
@@ -50,13 +116,14 @@ header {
     border: none;
     outline: none;
     color: white;
-    padding: 14px 16px;
+    padding: 25px 14px;
     background-color: inherit;
     font-family: inherit; 
     margin: 0; 
   }
   .navbar a:hover, .dropdown:hover .dropbtn {
     background-color: #48697a;
+    height: 100%;
   }
   .dropdown-content {
     display: none;
@@ -81,8 +148,297 @@ header {
   .dropdown:hover .dropdown-content {
     display: block;
   }
-  .section li { 
-    list-style-type: circle;
+
+  .section_about{
+    padding: 115px 0 30px 0;
+  }
+  .section_about .about_content{
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+    width: 100%;
+  }
+  .section_about .about_right{
+    width: 50%;
+    padding-left: 30px;
+  }
+  .section_about .about_left{
+    width: 50%;
+    padding-right: 30px;
+    position: relative;
+  }
+  .section_about .left_side{
+    border: 1px solid transparent;
+    padding: 67px 50px 64px;
+    margin: 0;
+    display: block;
+  }
+  .section_about .about_background{
+    border: 1px solid #f6efef;
+    border-radius: 8px;
+    box-shadow: 0 3px 20px rgba(0,0,0,0.04);
+    margin: 0;
+    display: block;
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    right: 30px;
+    top: 0;
+    bottom: 0;
+    background-color: #fff;
+  }
+  .section_about .about_left ul{
     margin: 0;
     padding: 0;
-  }  
+    list-style-type: none;
+  }
+  .section_about .about_left li{
+    margin-bottom: 20px;
+    display: flex;
+    width: 100%;
+  }
+  .section_about .about_left h5{
+    font-size: 18px;
+    font-weight: 600;
+    min-width: 100px;
+    margin: 0;
+    display: flex;
+  }
+  .section_about .about_left .about_title{
+    color: #000;
+    min-width: 100px;
+    margin-right: 30px;
+    display: inline-block;
+    font-weight: 600;
+  }
+  .section_about .about_left span{
+    color: #777;
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .section_about .about_left a{
+    text-decoration: none;
+    color: inherit;
+    border-bottom: 1px solid transparent;
+  }
+  .section_about .about_left a:hover{
+    border-bottom-color: #000;
+    color: #000;
+  }
+  .about_fl p{
+    font-size: 18px;
+    font-weight: 400;
+    color: #777;
+    line-height: 26px;
+    margin-bottom: 27px;
+  }
+  .success{
+    font-size: 18px;
+    font-weight: 400;
+    color: #000000;
+    line-height: 26px;
+    margin-bottom: 27px;
+    text-align: center;
+  }
+  .success p{
+    font-size: 18px;
+    font-weight: 400;
+    color: #777;
+    line-height: 26px;
+    margin-bottom: 27px;
+    text-align: center;
+  }
+  .success a{
+    text-decoration: none;
+    color: inherit;
+    border-bottom: 1px solid transparent;
+    text-align: center;
+  }
+  .success a:hover {
+    border-bottom-color: #000;
+    color: #000;
+  }
+  .about_fl p:last-child{
+    margin-bottom: 0;
+  }
+  footer {
+    background-color: #48697a;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+  .title{
+  max-width: 720px;
+	margin: 0 auto;
+	padding-bottom: 10px;
+	position: relative;
+  text-align: center;
+	margin-bottom: 70px;
+  }
+  .title h2{
+    margin: 0;
+    padding: 0;
+    font-size: 60px;
+    font-size: calc(30px + 1vw);
+    font-weight: 600;
+    line-height: 1;
+    padding-bottom: 0px;
+    text-transform: uppercase;
+  }
+  .title h1{
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1;
+    padding-bottom: 0px;
+    text-transform: uppercase;
+  }
+  .section_references{
+    padding: 50px 0 30px 0;
+  }
+  .section_contact{
+    padding: 50px 0 30px 0;
+  }
+  .section_success{
+    padding: 50px 0 30px 0;
+  }
+  
+ #table .section_table{
+    padding: 50px 0 30px 0;
+  }
+  #table .section_table table{
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  #table .section_table table th, .section_table table td{
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+  #table .section_table table th{
+    background-color: #48697a;
+    color: #fff;
+    font-weight: 600;
+  }
+  #table .section_table table tr:hover{
+    background-color: #f2f2f2;
+  }
+
+  .section_contact ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    margin-left: -20px;
+  }
+  .section_contact li{
+    float: left;
+    margin: 0;
+    padding: 0;
+    padding-left: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .section_contact li:last-child{
+    margin-bottom: 0;
+  }
+  .section_contact input{
+    background-color: #f2f2f2;
+    width: 100%;
+    min-width: 100%;
+    outline: none;
+    font-size: 16px;
+    font-weight: 400;
+    height: 50px;
+    border: none;
+    line-height: 50px;
+    border-radius: 3px;
+    font-family: "Jost",sans-serif;
+    padding: 0 20px !important;
+  }
+  .section_contact textarea{
+    background-color: #f2f2f2;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    font-weight: 400;
+    width: 100%;
+    min-height: 250px;
+    max-height: 500px;
+    border-radius: 3px;
+    font-family: "Jost",sans-serif;
+    padding: 14px 20px !important;
+  }
+  .section_contact input[type="email"]:focus,
+  .section_contact input[type="text"]:focus,
+  .section_contact textarea:focus{
+    background-color: #48697a33;
+  }
+  .section_contact textarea:focus::placeholder,
+  .section_contact input[type="email"]:focus::placeholder,
+  .section_contact input[type="text"]:focus::placeholder {
+    color: transparent;
+  }
+  .section_contact button[type="submit"]{
+    color: #fffeff;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #48697a;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.5s ease;
+    padding: 0 !important;
+    border-radius: 3px;
+  }
+  .section_contact button[type="submit"]:hover{
+    background-color: #8baec0;
+  }
+  .section_contact .contact{
+    display: flex;
+    width: 100%;
+  }
+  .section_contact .contact_form_box{
+    width: 85%;
+  }
+  textarea{
+    border-radius:0;
+    font-size:13px;
+    color:#333;
+    resize:vertical;
+    font-family:'Raleway', Arial, Helvetica, sans-serif;
+    line-height:1.4;
+    padding:10px!important;
+    width:100%;
+    border:1px solid #eee;
+  }
+  input[type="text"],
+  input[type="email"] {
+    border-radius:0;
+    font-size:13px;
+    min-width:220px;
+    color:#333;
+    letter-spacing:0.5px;font-family:'Raleway', Arial, Helvetica, sans-serif;
+    line-height:1.6;
+    padding:10px!important;
+    height:44px;
+    vertical-align:middle;
+    border:1px solid #eee;
+  }
+  button[type="submit"]{
+    padding: 13px 15px;
+    height: 40px;
+    line-height: 1;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    border:none;
+    cursor:pointer;
+    color: #FFF;
+    background:#777;
+  }
